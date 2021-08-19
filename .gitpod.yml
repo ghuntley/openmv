@@ -1,0 +1,14 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+  - init: |
+      cd src
+      make -j6 -C micropython/mpy-cross
+      make -j6
+
+    command: |
+      # this command would be executed on startup
+
+vscode:
+  extensions:
+    - ms-python.python
